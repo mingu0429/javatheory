@@ -26,7 +26,7 @@ class Dog extends Animal {
 }
 
 public class MethodOverriding_2 {
-	public static void mian(String[] args) {
+	public static void main(String[] args) {
 		Animal aa = new Animal();
 		Bird bb = new Bird();
 		Cat cc = new Cat();
