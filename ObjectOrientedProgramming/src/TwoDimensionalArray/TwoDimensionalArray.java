@@ -1,0 +1,18 @@
+package TwoDimensionalArray;
+
+public class TwoDimensionalArray {
+	public static void main(String[] args) {
+		String parse[][]; // 이차원 스트링 배열
+		parse = new String[args.length][];
+		for (int j = 0; j < args.length; j++) {
+			parse[j] = new String[args[j].length()];
+			for (int k = 0; k < args[j].length(); k++)
+				parse[j][k] = String.valueOf(args[j].charAt(k)); // 한 글자(char) 추출,스트링 변환
+		}
+		for (int j = 0; j < parse.length; j++) {
+			for (int k = 0; k < parse[j].length; k++)
+				System.out.print(parse[j][k] + " ");
+			System.out.println("");
+		}
+	}
+}
