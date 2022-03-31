@@ -401,14 +401,14 @@ public class DoublyLinkedList {
 		System.out.println("\n");
 		DoublyLinkedList listA = new DoublyLinkedList();
 		System.out.print("2018 러시아 월드컵 4강전 : ");
-		listA.firstinsertNode("프랑스");
-		listA.firstinsertNode("벨기에");
-		listA.firstinsertNode("크로아티아");
-		listA.firstinsertNode("잉글랜드");
-		listA.displayLinkedList();
-		System.out.print("2018 러시아 월드컵 결승전 : ");
+		listA.add(0,"프랑스");
+		listA.add(1,"벨기에");
+		listA.add(2,"크로아티아");
+		listA.add(3,"잉글랜드");
+		listA.toString();
+		/*System.out.print("2018 러시아 월드컵 결승전 : ");
 		listA.removeNode("벨기에");
 		listA.removeNode("잉글랜드");
-		listA.displayLinkedList();
+		listA.displayLinkedList();*/
 	}
 }
