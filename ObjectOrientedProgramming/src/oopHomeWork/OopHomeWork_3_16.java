@@ -3,7 +3,7 @@ package oopHomeWork;
 public class OopHomeWork_3_16 {
 
 	public static void main(String[] args) {
-		double[][] arr = { { 15, 25, 35 }, { 45, 55, 65 }, { 75, 85, 95 } };
+		double[][] arr = { { 1, 2, 3 }, { 2, 5, 3 }, { 1, 0, 8 } };
 		double[][] trans_arr = new double[3][3];
 		int i, j;
 
@@ -37,7 +37,24 @@ public class OopHomeWork_3_16 {
 
 		determinant = (arr[0][0] * x) - (arr[0][1] * y) + (arr[0][2] * z);
 
-		System.out.println("\n행렬식을 구하라 = " + determinant);//(b)정방행렬이면 행렬식을 구하여라
+		System.out.println("\n행렬식을 구하라 = " + determinant);// (b)정방행렬이면 행렬식을 구하여라
+		if (determinant == 0) {
+			System.out.println("역행렬이 존재하지 않습니다.");
+		}
+		
+		double det = 0;
+		
+		for (i = 0; i < 3; i++)
+			det = det + (arr[0][i]
+					* (arr[1][(i + 1) % 3] * arr[2][(i + 2) % 3] - arr[1][(i + 2) % 3] * arr[2][(i + 1) % 3]));
+		
+		System.out.println("\n역행렬을 구하여라:");
+		for (i = 0; i < 3; ++i) {
+			for (j = 0; j < 3; ++j)
+				System.out.print((((arr[(j + 1) % 3][(i + 1) % 3] * arr[(j + 2) % 3][(i + 2) % 3])
+						- (arr[(j + 1) % 3][(i + 2) % 3] * arr[(j + 2) % 3][(i + 1) % 3])) / det) + " ");
+			System.out.print("\n");
+		}
 
 	}
 

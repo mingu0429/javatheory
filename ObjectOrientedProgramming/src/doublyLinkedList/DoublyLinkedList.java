@@ -404,10 +404,10 @@ public class DoublyLinkedList {
 		listA.add(0,"프랑스");
 		listA.add(1,"벨기에");
 		listA.add(2,"크로아티아");
-		listA.add(3,"잉글랜드");
-		listA.toString();
+		listA.remove(2);
+		listA.add(1,"잉글랜드");
+		System.out.print(listA.toString());
 		/*System.out.print("2018 러시아 월드컵 결승전 : ");
-		listA.removeNode("벨기에");
 		listA.removeNode("잉글랜드");
 		listA.displayLinkedList();*/
 	}
