@@ -1,7 +1,7 @@
 package circularLinkedList;
 
 public class CircularLinkedList {
-	public class Node {
+	public class Node { //노드 클래스
 		   String nodeData;
 		   Node nextNode;
 		   
@@ -32,10 +32,10 @@ public class CircularLinkedList {
         this.cList = null;
     }
  
-    //마지막 노드에 삽입
+    //마지막 노드에 삽입할 경우
     void insertLastNode(String str){
         Node node = new Node(str);
-        if(cList == null){
+        if(cList == null){//cList가 비었을 경우
             cList = node;
             node.nextNode = node;
         }else{
@@ -48,7 +48,7 @@ public class CircularLinkedList {
         }
     }
  
-    //첫번째 노드에 삽입
+    //첫번째 노드에 삽입할 경우
     void insertFirstNode(String str){
         Node node = new Node(str);
         if(cList == null){
@@ -64,7 +64,7 @@ public class CircularLinkedList {
         }
     }
  
-    //중간 노드에 삽입
+    //중간 노드에 삽입할 경우
     void inserNode(Node pre, String str){
         Node node = new Node(str);
         if(cList == null){
@@ -80,10 +80,10 @@ public class CircularLinkedList {
         }
     }
  
-    //마지막 노드 삭제
+    //마지막 노드를 삭제할 경우
     void removeLastNode(){
         if(cList==null){
-            System.out.println("지울 노드가 존재하지 않습니다.");
+            System.out.println("노드가 존재하지 않습니다.");
         }else{
             Node prevNode = cList;
             Node current = cList.nextNode;
@@ -95,10 +95,10 @@ public class CircularLinkedList {
         }
     }
  
-    //첫번째 노드 삭제
+    //첫번째 노드를 삭제할 경우
     void removeFirstNode(){
         if(cList==null){
-            System.out.println("지울 노드가 존재하지 않습니다.");
+            System.out.println("노드가 존재하지 않습니다.");
         }else{
             Node current = cList;
             while(current.nextNode!=cList){
@@ -110,11 +110,11 @@ public class CircularLinkedList {
         }
     }
  
-    //중간 노드 삭제
+    //str을 받아서 노드를 삭제할 경우
     void removeNode(String str){
         Node node = new Node(str);
-        if(cList==null){
-            System.out.println("지울 노드가 존재하지 않습니다.");
+        if(cList==null){//cList가 비었다면
+            System.out.println("노드가 존재하지 않습니다.");
         }else{
             Node prev = cList;
             Node current = cList.nextNode;
@@ -126,9 +126,9 @@ public class CircularLinkedList {
         }
     }
  
-    void displayCircularList(){
-        if(cList==null){
-            System.out.println("출력할 리스트가 존재하지 않습니다.");
+    void displayCircularList(){//리스트를 출력
+        if(cList==null){//cList가 비었다면
+            System.out.println("리스트가 없습니다.");
         }else{
             Node current = cList;
             
@@ -153,7 +153,7 @@ public class CircularLinkedList {
         list.displayCircularList();
         
         System.out.print("일주일: ");
-        list.insertFirstNode("일");
+        list.insertFirstNode("일");//처음 노드에 "일" 삽입
         list.insertLastNode("토");
         list.displayCircularList();
         
@@ -162,7 +162,7 @@ public class CircularLinkedList {
         list.removeLastNode();
         list.displayCircularList();
         System.out.print("수요일삭제: ");
-        list.removeNode("수");
+        list.removeNode("수");//"수"를 찾아서 삭제
         list.displayCircularList();
      }
 }

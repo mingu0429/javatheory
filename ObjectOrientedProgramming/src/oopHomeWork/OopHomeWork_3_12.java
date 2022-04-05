@@ -29,11 +29,12 @@ public class OopHomeWork_3_12 {
 	}
 
 	public static void main(String[] args) {
-		System.out.println("B^2-4AC의 제곱근: " + sqrt(1, 4, 3));//a 
-		System.out.println("X와 Y의 곱의 세제곱근: " + cbrt(2, 4));//b
-		System.out.println("pi * R^2: " + pi(10));//c
-		System.out.println("sin theta / cos theta: " + sincos(45));//d
-		System.out.println("X/2: " + division(25));//e
+		System.out.println("B^2-4AC의 제곱근: " + sqrt(1, 4, 3));//a sqrt()를 사용하여 제곱함
+		System.out.println("X와 Y의 곱의 세제곱근: " + cbrt(2, 4));//b Math.pow()를 사용하여 세제곱근을 구함 
+		System.out.println("pi * R^2: " + pi(10));//c PI와 Math.pow 사용
+		System.out.println("sin theta / cos theta: " + sincos(45));
+		//d Math.toRadians()로 각도를 받아 Math.sin과 Math.cos에 대입
+		System.out.println("X/2: " + division(25));//e 
 		System.out.println("F = 1.8 * C + 32: "+ function(10));//f
 	}
 
