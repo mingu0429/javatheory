@@ -9,11 +9,11 @@ import java.awt.Label;
 public class TestLabel extends Frame {
 	public TestLabel(String title){
 		super(title);
-		setBackground(Color.lightGray);;
+		setBackground(Color.lightGray);
 		setLayout(new FlowLayout());
 		Label al = new Label("Label");
 		add(al);
-        Label biggerlabel = new Label("I wanna bigger Labels!");
+        Label biggerlabel = new Label("혜미미");
         biggerlabel.setFont(new Font("Helvetica", Font.BOLD, 24));
         biggerlabel.setBackground(Color.white);
         add(biggerlabel);

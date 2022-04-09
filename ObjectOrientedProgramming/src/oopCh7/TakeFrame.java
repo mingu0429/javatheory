@@ -11,6 +11,6 @@ public class TakeFrame extends Frame{
 		setVisible(true);
 	}
 	public static void main(String[] args) {
-		new TakeFrame("Title");
+		new TakeFrame("타이틀");
 	}
 }
